@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <h3>Logo ITT</h3>
+      <p>Bienvenido</p>
+
+      <a href="/empresas">Empresas</a><br> 
+      <a href="/vacantes">Vacantes</a><br>
+      <a href="/aspirantes">Aspirantes</a><br> 
+    </div>
+    <div class="col-sm-9">
+        
+        <h2>Empresas</h2>
+        <h6>Listado de empresas registradas</h6><br><br>
+
+        <table id="mytable" class="table table-stripped table-responsive-md btn-table">
+            <thead>
+                <tr>
+                    <th class="th-sm"> Fecha</th>
+                    <th class="th-sm"> Empresa</th>
+                    <th class="th-sm"> Vacantes</th>
+                    <th class="th-sm"> Publicadas</th>
+                    <th class="th-sm"> Contactp</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#empresas}}
+                <tr>
+                    <br>
+                    <td>{{fecha}}</td>
+                    <td>{{nombre}}</td>
+                    <td>{{vacantes}}</td>
+                    <td>{{publicadas}}</td>
+                    <td>{{contacto}}</td>
+                </tr>
+                {{/empresas}}
+            </tbody>
+        </table>
+    </div>
+  </div>
+</div>

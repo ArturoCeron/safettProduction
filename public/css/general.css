@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat'),
+            local('Montserrat Regular'),
+            local('Montserrat-Regular'),
+            url(../fonts/Montserrat-Regular.ttf) format('truetype');
+}
+
+:root {
+    --color-blue-main: #002F6C;
+    --color-blue-light: #004299;
+    --color-grey-main: #EEEEEE;
+    --color-grey-dark: #858585;
+    --color-black: #181818;
+}
+
+body{
+    font-family: 'Montserrat';
+}
+
+.navbar{
+    background-color: var(--color-blue-main)!important;
+    font-weight: 600;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color: white;
+    padding-right: 30px;
+}
+
+.btn-outline-success {
+    color: white;
+    border-color: white;
+    font-weight: 600;
+}
+
+.btn-outline-success:hover,
+.btn-outline-success:active,
+.btn-outline-success:visited,
+.btn-outline-success:focus {
+    background-color: white;
+    border-color: var(--color-blue-main);
+    color: var(--color-blue-main);
+}
+
+#footerContainer{
+    background-color: var(--color-blue-main)!important;
+}
+
+#footerContent{
+    padding: 16px 0px;
+}
+
+#footerImage{
+    height: 175px;
+    width: auto;
+}
+
+#footerImageSection{
+    display: flex; 
+    justify-content: flex-end;
+    margin-bottom: 0px;
+}
+
+.footerTitle{
+    font-size: large;
+    color: white;
+}
+
+.footerParagraph{
+    font-size: small;
+    text-align: justify;
+    color: white;
+}

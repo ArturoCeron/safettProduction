@@ -1,10 +1,22 @@
-<header> 
-    <nav class="navbar navbar-expand-sm bg-dark" style="font-size: 24px; background-color: black;">
-        <ul class="navbar-nav" style="align-items: center;">
-          <li class="nav-item"><a class="nav-link" href="/" style="color: white !important;">Home</a></li>
-          {{#unless loggedIn}}<li class="nav-item"><a class="nav-link" href="/users/register" style="color: white !important;">Registro</a></li>
-          <li class="nav-item"><a class="nav-link" href="/auth/login" style="color: white !important;">Iniciar Sesión</a></li>{{/unless}}
-          {{#if loggedIn}}<li class="nav-item"><a class="nav-link" href="/auth/logout" style="color: white !important;">Logout</a></li>{{/if}}
-        </ul>
+<!-- Navbar -->
+<header>            
+    <nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/"> LOGO </a></li>
+                <li class="nav-item"><a class="nav-link" href="#"> Empleos </a></li>
+                <li class="nav-item"><a class="nav-link" href="#"> Empresas </a></li>
+            <li class="nav-item"><a class="nav-link" href="#"> Contacto </a></li>
+            </ul>
+    
+            <div class="collapse navbar-collapse" id="main_nav">
+                <ul class="navbar-nav ms-auto">
+                    {{#unless loggedIn}}<li class="nav-item"><a class="nav-link" href="/auth/login"> Ingresar </a></li>
+                    <a href="/users/register"><button class="btn btn-outline-success" type="submit">Crear cuenta</button></a>{{/unless}}                    
+                    {{#if loggedIn}}<li class="nav-item"><a class="nav-link" href="/auth/logout"> Cerrar sesión </a></li>{{/if}}
+                </ul>
+            </div>
+        </div>
     </nav>
 </header>
+<!-- Navbar -->

@@ -1,0 +1,51 @@
+#main-banner{
+    background-color: var(--color-blue-light)!important;
+    height: 300px;
+    align-items: center;
+    text-align: center;
+}
+
+#homeSearchBar{
+    padding-top: 120px;
+}
+
+#containerCompany{
+    background-color: var(--color-grey-main);
+    border-radius: 0px 0px 20px 20px;
+}
+
+.logoHolder{
+    width: 160px;
+    height: 160px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.companyImage{
+    width: 100%;
+    height: auto;
+}
+
+#containerInfo{
+    background-color: var(--color-grey-main);
+    border-radius: 20px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    padding: 30px;
+}
+
+.homeTitle{
+    font-size: xx-large;
+}
+
+.homeParagraph{
+    font-size: medium;
+    text-align: justify;
+}
+
+.homeImage{
+    width: 100%;
+    height: auto;
+    padding: 10px 50px;
+}

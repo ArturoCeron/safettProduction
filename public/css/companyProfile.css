@@ -1,0 +1,112 @@
+#companyIdentityBanner{
+    background-color: var(--color-grey-main);
+    margin-top: 64px;
+    height: 200px;
+    align-items: center;
+}
+
+#companyIdentity{
+    font-size: large;
+    text-align: justify;
+    color: black;
+}
+
+#companyName{
+    font-size: larger;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.companySectionDivider{
+    border-top: 5px solid var(--color-blue-main);
+    margin: 20px 0px;
+    transform: translate(-16px);
+    opacity: 1;
+    border-radius: 0px 5px 5px 0px;
+}
+
+#companyInformationSection{
+    background-color: var(--color-blue-main);
+    border-radius: 10px;
+    padding: 0px;
+    height: 1000px;
+    transform: translate(0, -232px);
+}
+
+#companyLogo{
+    background-color: white;
+    object-fit: contain;
+    aspect-ratio: 1;
+    width: calc(100% - 48px);
+    height: auto;
+    border-radius: 10px;
+    margin: 24px;
+}
+
+.infoSectionDivider{
+    border-top: 1px solid black;
+    opacity: 0.2;
+    margin: 20px 0px;
+}
+
+.infoSection{
+    padding: 0px 16px;
+    font-size: small;
+    text-align: justify;
+    color: white;
+}
+
+.infoTitle{
+    font-size: medium;
+    font-weight: 700;
+}
+
+.contentSection{
+    margin: 32px;
+}
+
+.contentTitle{
+    color: var(--color-blue-main);
+    font-size: larger;
+    font-weight: 600;
+}
+
+.contentParagraph{
+    font-size: large;
+    text-align: justify;
+}
+
+.contentDivider{
+    border-top: 3px solid var(--color-blue-main);
+    margin: 20px 0px;
+    opacity: 1;
+    border-radius: 5px;
+}
+
+.vacantElement{
+    
+}
+
+.vacantName{
+    color: var(--color-blue-light);
+    font-size: larger;
+    font-weight: 600;
+    margin: 0;
+}
+
+.vacantSalary{
+    color: var(--color-blue-light);
+    font-size: small;
+    margin-left: 8px;
+}
+
+.vacantDescription{
+    font-size: small;
+}
+
+.vacantDate{
+    font-size: small;
+    font-weight: 600;
+    color: var(--color-grey-dark);
+    text-align: right;
+}

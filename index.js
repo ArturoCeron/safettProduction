@@ -22,7 +22,7 @@ app.engine('.hbs', hbs({
 }))
 app.set('view engine', '.hbs')
 //Recursos Estáticos
-app.use('/static', express.static('public'))
+app.use(express.static('public'))
 
 //Router app
 app.use('/', router)

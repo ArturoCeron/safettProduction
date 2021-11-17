@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const empresasSchema = new Schema({
+const vacantes = new Schema({
 
     fecha: {
         type: Date
@@ -22,10 +22,22 @@ const empresasSchema = new Schema({
     },
     cantidad: {
         type: Int
+    },
+    salario: {
+        type: Number, 
+        default: 0
+    },
+    desc_det: {
+        type: String,
+        required: true
+    },
+    exp_req: {
+        type: String,
+        required: true
     }
 });
 
 
 //export model
-const Empresas = mongoose.model('Empresas', empresasSchema);
-module.exports = Empresas;
+const vacantesEmpresa = mongoose.model('vacantesEmpresa', vacantes);
+module.exports = vacantesEmpresa;

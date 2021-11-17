@@ -3,39 +3,35 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const empresasSchema = new Schema({
+const contactoEmpresas = new Schema({
 
     nombre: {
         type: String,
         required: true
     },
-    calle: {
+    apellido: {
         type: String,
         required: true
     },
-    numero: {
-        type: Int,
-        required: true
-    },
-    colonia: {
+    cargo: {
         type: String,
         required: true
     },
-    postal: {
-        type: Int,
+    correo: {
+        type: String, 
+        unique:true,
+        lowercase:true,
         required: true
     },
-    estado: {
+    telefono: {
         type: String,
         required: true
     },
-    ciudad: {
-        type: String,
-        required: true
+    extension: {
+        type: Int
     }
 });
 
-
 //export model
-const Empresas = mongoose.model('Empresas', empresasSchema);
-module.exports = Empresas;
+const contactos = mongoose.model('contactos', contactoEmpresas);
+module.exports = contactos;

@@ -1,0 +1,28 @@
+#sectionForm{
+    margin: 184px 0;
+}
+
+#formTitle{
+    font-size: x-large;
+}
+
+#formContent{
+    font-size: medium;
+    text-align: justify;
+}
+
+#btnLogInMail{
+    width: 100%;
+    margin-top: 32px;
+}
+
+.formSubtitle{
+    font-size: large;
+    margin-top: 48px;
+    margin-bottom: 4px;
+}
+
+#formDivider{
+    margin-top: 0;
+    margin-bottom: 8px;
+}

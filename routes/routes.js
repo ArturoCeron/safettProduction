@@ -60,7 +60,7 @@ router.get('/empresas', (req, res) => {
 
 //Pagina Vacantes
 router.get('/vacantes', (req, res) => {
-    res.render('vacantes');
+    res.render('vacants');
 });
 
 //Pagina Aspirantes
@@ -68,8 +68,18 @@ router.get('/aspirantes', (req, res) => {
     res.render('aspirantes');
 });
 
+//Perfil de Empresa
+router.get('/perfilEmpresa', (req, res) => {
+    res.render('companyProfile');
+});
+
+//RENDER TEMPORAL
+//REGISTER COMPANY
+router.get('/company/register', (req, res) => {
+    res.render('companyRegister');
+});
+
 //Página home
 router.use((req,res) =>{
     res.render('notfound');
 });
-

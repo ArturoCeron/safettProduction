@@ -8,6 +8,7 @@
 
 :root {
     --color-blue-main: #002F6C;
+    --color-blue-dark: #072650;
     --color-blue-light: #004299;
     --color-grey-main: #EEEEEE;
     --color-grey-dark: #858585;
@@ -28,16 +29,48 @@ body{
     padding-right: 30px;
 }
 
-.btn-outline-success {
+.buttonSolid {
+    background-color: var(--color-blue-main)!important;;
+    color: white;
+    border-color: var(--color-blue-main);
+    font-weight: 600;
+}
+
+.buttonSolid:hover,
+.buttonSolid:active,
+.buttonSolid:visited,
+.buttonSolid:focus {
+    background-color: var(--color-blue-dark)!important;
+    border-color: var(--color-blue-dark);
+    color: white;
+}
+
+.buttonSolidInverted {
+    background-color: white;
+    color: var(--color-blue-main);
+    border-color: var(--color-blue-main);
+    font-weight: 600;
+}
+
+.buttonSolidInverted:hover,
+.buttonSolidInverted:active,
+.buttonSolidInverted:visited,
+.buttonSolidInverted:focus {
+    background-color: var(--color-grey-main)!important;
+    border-color: var(--color-blue-dark);
+    color: var(--color-blue-dark);
+}
+
+.buttonBorder {
     color: white;
     border-color: white;
     font-weight: 600;
 }
 
-.btn-outline-success:hover,
-.btn-outline-success:active,
-.btn-outline-success:visited,
-.btn-outline-success:focus {
+.buttonBorder:hover,
+.buttonBorder:active,
+.buttonBorder:visited,
+.buttonBorder:focus {
     background-color: white;
     border-color: var(--color-blue-main);
     color: var(--color-blue-main);

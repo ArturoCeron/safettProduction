@@ -1,34 +1,266 @@
 <div class="container">
   <div class="row justify-content-md-center">
     <div class="col-6">
-      <div id="sectionForm">
+
+      <div id="companyRegistrationForm">
         <p id="formTitle">Registro de empresa</p>
-        <p class="formSubtitle">Perfil del usuario</p>
-        <hr id="formDivider" class="contentDivider">
+
         <form action="#" method="POST">
-          <label for="txtNombre" class="col-form-label">Nombre(s)</label>
-          <input id="txtNombre" type="text" class="form-control" placeholder="Nombre(s)">
-          <label for="txtApellidos" class="col-form-label">Apellidos</label>
-          <input id="txtApellidos" type="text" class="form-control" placeholder="Apellidos">
-          <label for="txtTelefono" class="col-form-label">Teléfono</label>
-          <input id="txtTelefono" type="text" class="form-control" placeholder="Número">
-          <label for="txtCargo" class="col-form-label">Cargo en la empresa</label>
-          <input id="txtCargo" type="text" class="form-control" placeholder="Cargo en la empresa">
-          <p class="formSubtitle">Datos de acceso</p>
-          <hr id="formDivider" class="contentDivider">
-          <label for="txtMail" class="col-form-label">Correo</label>
-          <input id="txtMail" type="text" class="form-control" placeholder="Correo">
-          <label for="txtPassword" class="col-form-label">Contraseña</label>
-          <input id="txtPassword" type="password" class="form-control" placeholder="Contraseña">
-          <div class="row">
-              <div class="col-6">
-                  <button id="btnLogInMail" class="buttonSolidInverted btn btn-outline-success" type="submit">Cancelar</button>
+
+          <div id="companyUserSection">
+            <p class="formSubtitle">Perfil del usuario</p>
+            <hr id="formDivider" class="contentDivider">
+            <label for="txtName" class="col-form-label">Nombre(s)</label>
+            <input id="txtName" type="text" class="form-control" placeholder="Nombre(s)" required>
+            <label for="txtLastName" class="col-form-label">Apellidos</label>
+            <input id="txtLastName" type="text" class="form-control" placeholder="Apellidos" required>
+            <label for="txtPhone" class="col-form-label">Teléfono</label>
+            <input id="txtPhone" type="text" class="form-control" placeholder="Número" required>
+            <label for="txtPosition" class="col-form-label">Cargo en la empresa</label>
+            <input id="txtPosition" type="text" class="form-control" placeholder="Cargo en la empresa" required>
+            <p class="formSubtitle">Datos de acceso</p>
+            <hr id="formDivider" class="contentDivider">
+            <label for="txtMail" class="col-form-label">Correo</label>
+            <input id="txtMail" type="text" class="form-control" placeholder="Correo" required>
+            <label for="txtPassword" class="col-form-label">Contraseña</label>
+            <input id="txtPassword" type="password" class="form-control" placeholder="Contraseña" required>
+            <div class="row">
+                <div class="col-6">
+                    <button class="buttonSolidInverted btnLong btn btn-outline-success" type="button" onclick="userSectionCancel()">Cancelar</button>
+                </div>
+                <div class="col-6">
+                    <button class="buttonSolid btnLong btn btn-outline-success" type="button" onclick="userSectionNext()">Seguir</button>
+                </div>
+            </div>
+          </div> 
+
+          <div id="companyInfoSection" class="sectionHidden">
+            <p class="formSubtitle">Información de Empresa</p>
+            <hr id="formDivider" class="contentDivider">
+            <label for="txtCompanyName" class="col-form-label">Nombre de la empresa</label>
+            <input id="txtCompanyName" type="text" class="form-control" placeholder="Nombre de la empresa" required>
+            <label for="listCompanyBusiness" class="col-form-label">Giro</label>
+            <select id="listCompanyBusiness" class="form-select" required>
+              <option value="">Selecciona...</option>
+              <option value="1">Agencia Aduanal</option>
+              <option value="2">Agencia de Autos</option>
+              <option value="3">Agencias de Autos Nuevos</option>
+              <option value="4">Alimentos</option>
+              <option value="5">Asociación Civil</option>
+              <option value="6">Bienes Raices / Inmobiliaria</option>
+              <option value="7">Clínica</option>
+              <option value="8">Comercializadoras</option>
+              <option value="9">Construcción</option>
+              <option value="10">Constructora y Servicios</option>
+              <option value="11">Consultoria</option>
+              <option value="13">De Servicios</option>
+              <option value="12">Dependencia Gubernamental</option>
+              <option value="14">Diseño y Administración Sitios Web</option>
+              <option value="15">Educativa</option>
+              <option value="16">Electricidad y Agua</option>
+              <option value="17">Entretenimiento</option>
+              <option value="18">Farmacéutica</option>
+              <option value="19">Financiera</option>
+              <option value="20">Ganadería</option>
+              <option value="21">Gasolineria</option>
+              <option value="22">Higiene Industrial</option>
+              <option value="23">Hospital</option>
+              <option value="24">Hotelería y Turismo</option>
+              <option value="25">Imprenta y Editoriales</option>
+              <option value="26">Industria de Exportación</option>
+              <option value="27">Industrias Diversas</option>
+              <option value="28">Informatica</option>
+              <option value="29">Logística</option>
+              <option value="30">Manufacturera</option>
+              <option value="31">Manufacturera (Nacional.)</option>
+              <option value="32">Maquiladora (Export.)</option>
+              <option value="33">Medicina</option>
+              <option value="34">Medios de Comunicación</option>
+              <option value="35">Mercadotecnia</option>
+              <option value="36">Metal Mecánico</option>
+              <option value="37">Minería Extracción</option>
+              <option value="38">Mueblero Artesanal</option>
+              <option value="39">Pesca</option>
+              <option value="40">Plástico</option>
+              <option value="41">Publicidad / Relaciones Públicas</option>
+              <option value="42">Químico</option>
+              <option value="43">Reclutadora</option>
+              <option value="44">Salud</option>
+              <option value="45">Servicios</option>
+              <option value="46">Servicios de ingeniería</option>
+              <option value="47">Servicios Publicos</option>
+              <option value="48">Sistema de Cómputo</option>
+              <option value="49">Sistema de Monitoreo</option>
+              <option value="50">Telecomunicaciones</option>
+              <option value="51">Telemarketing</option>
+              <option value="52">Textil y Vestido</option>
+              <option value="53">Varios Giros</option>
+            </select>
+            <label for="txtEmployeeNumber" class="col-form-label">Número de empleados</label>
+            <input id="txtEmployeeNumber" type="text" class="form-control" placeholder="Número de empleados" required>
+            <label for="txtMainActivity" class="col-form-label">Actividad principal</label>
+            <input id="txtMainActivity" type="text" class="form-control" placeholder="Actividad principal" required>
+            <label for="txtWebSite" class="col-form-label">Sitio web</label>
+            <input id="txtWebSite" type="text" class="form-control" placeholder="Sitio web">
+            <label for="txtDescription" class="col-form-label">Descripción</label>
+            <input id="txtDescription" type="text" class="form-control" placeholder="Descripción" required>
+            <div class="row">
+                <div class="col-6">
+                    <button class="buttonSolidInverted btnLong btn btn-outline-success" type="button" onclick="infoSectionBack()">Atrás</button>
+                </div>
+                <div class="col-6">
+                    <button class="buttonSolid btnLong btn btn-outline-success" type="button" onclick="infoSectionNext()">Seguir</button>
+                </div>
+            </div>
+          </div> 
+
+          <div id="branchInfoSection" class="sectionHidden">
+            <p class="formSubtitle">Perfil de sucursal</p>
+            <hr id="formDivider" class="contentDivider">
+            <label for="txtBranchName" class="col-form-label">Nombre de la sucursal</label>
+            <input id="txtBranchName" type="text" class="form-control" placeholder="Nombre de la sucursal" required>
+            <p class="formSubtitle">Ubicación de sucursal</p>
+            <hr id="formDivider" class="contentDivider">
+            <label for="listState" class="col-form-label">Estado</label>
+            <select id="listState" class="form-select" required>
+              <option value="">Seleccionar Estado...</option>
+              <option value="1">Aguascalientes</option>
+              <option value="2">Baja California</option>
+              <option value="3">Baja California Sur</option>
+              <option value="4">Campeche</option>
+              <option value="5">Chiapas</option>
+              <option value="6">Chihuahua</option>
+              <option value="7">Coahuila</option>
+              <option value="8">Colima</option>
+              <option value="9">Distrito Federal</option>
+              <option value="10">Durango</option>
+              <option value="11">Estado de  México</option>
+              <option value="12">Guanajuato</option>
+              <option value="13">Guerrero</option>
+              <option value="14">Hidalgo</option>
+              <option value="15">Jalisco</option>
+              <option value="16">Michoacán</option>
+              <option value="17">Morelos</option>
+              <option value="18">Nayarit</option>
+              <option value="19">Nuevo Leon</option>
+              <option value="20">Oaxaca</option>
+              <option value="21">Puebla</option>
+              <option value="22">Querétaro</option>
+              <option value="23">Quintana Roo</option>
+              <option value="24">San Luis Potosí</option>
+              <option value="25">Sinaloa</option>
+              <option value="26">Sonora</option>
+              <option value="27">Tabasco</option>
+              <option value="28">Tamaulipas</option>
+              <option value="29">Tlaxcala</option>
+              <option value="30">Veracruz</option>
+              <option value="31">Yucatán</option>
+              <option value="32">Zacatecas</option>
+            </select>
+            <label for="txtCity" class="col-form-label">Ciudad</label>
+            <input id="txtCity" type="text" class="form-control" placeholder="Ciudad" required>
+            <div class="row">
+              <div class="col-8">
+                <label for="txtStreet" class="col-form-label">Calle</label>
+                <input id="txtStreet" type="text" class="form-control" placeholder="Calle" required>
               </div>
-              <div class="col-6">
-                  <button id="btnLogInMail" class="buttonSolid btn btn-outline-success" type="submit">Seguir</button>
+              <div class="col-4">
+                <label for="txtNumber" class="col-form-label">Número</label>
+                <input id="txtNumber" type="text" class="form-control" placeholder="Número" required>
               </div>
-          </div>
-        </form>
+            </div>
+            <div class="row">
+              <div class="col-8">
+                <label for="txtSuburb" class="col-form-label">Colonia</label>
+                <input id="txtSuburb" type="text" class="form-control" placeholder="Colonia" required>
+              </div>
+              <div class="col-4">
+                <label for="txtZip" class="col-form-label">Código postal</label>
+                <input id="txtZip" type="text" class="form-control" placeholder="Código postal" required>
+              </div>
+            </div>
+            <p class="formSubtitle">Contacto de la sucursal</p>
+            <hr id="formDivider" class="contentDivider">
+            <label for="txtNameContact" class="col-form-label">Nombre completo del contacto</label>
+            <input id="txtNameContact" type="text" class="form-control" placeholder="Nombre completo del contacto" required>
+            <label for="txtMailContact" class="col-form-label">Correo electrónico</label>
+            <input id="txtMailContact" type="text" class="form-control" placeholder="Correo electrónico" required>
+            <label for="txtPhoneContact" class="col-form-label">Número de teléfono</label>
+            <input id="txtPhoneContact" type="text" class="form-control" placeholder="Número de teléfono" required>
+            <p class="formSubtitle">Beneficios de la sucursal</p>
+            <hr id="formDivider" class="contentDivider">
+            <p class="formContent">Marca los beneficios y prestaciones que ofrece su empresa.</p>
+            
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="1" id="chkBenefit1">
+              <label class="form-check-label" for="chkBenefit1">Seguro de vida</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="1" id="chkBenefit2">
+              <label class="form-check-label" for="chkBenefit2">Bonos anuales</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="1" id="chkBenefit3">
+              <label class="form-check-label" for="chkBenefit3">Guardería</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="1" id="chkBenefit4">
+              <label class="form-check-label" for="chkBenefit4">Caja de ahorro</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="1" id="chkBenefit5">
+              <label class="form-check-label" for="chkBenefit5">Comedor</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="1" id="chkBenefit6">
+              <label class="form-check-label" for="chkBenefit6">Fondo de ahorro</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="1" id="chkBenefit7">
+              <label class="form-check-label" for="chkBenefit8">Transporte</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="1" id="chkBenefit8">
+              <label class="form-check-label" for="chkBenefit9">Uniforme</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="1" id="chkBenefit9">
+              <label class="form-check-label" for="chkBenefit10">Descuentos de productos</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="1" id="chkBenefit10">
+              <label class="form-check-label" for="chkBenefit11">Gimnasio</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="1" id="chkBenefit11">
+              <label class="form-check-label" for="chkBenefit11">Seguro de gastos médicos</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="1" id="chkBenefit12">
+              <label class="form-check-label" for="chkBenefit12">Plan de indexación</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="1" id="chkBenefit13">
+              <label class="form-check-label" for="chkBenefit13">Utilidades garantizadas</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="1" id="chkBenefit14">
+              <label class="form-check-label" for="chkBenefit14">Servicios médicos en planta</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="1" id="chkBenefit15">
+              <label class="form-check-label" for="chkBenefit15">Regaderas</label>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <button class="buttonSolidInverted btnLong btn btn-outline-success" type="button" onclick="branchSectionBack()">Atrás</button>
+                </div>
+                <div class="col-6">
+                    <button class="buttonSolid btnLong btn btn-outline-success">Listo</button>
+                </div>
+            </div>
+          </div> 
+        </form>     
       </div>
     </div>
   </div>

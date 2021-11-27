@@ -2,11 +2,15 @@
     margin: 184px 0;
 }
 
+#companyRegistrationForm{
+    margin: 64px 0;
+}
+
 #formTitle{
     font-size: x-large;
 }
 
-#formContent{
+.formContent{
     font-size: medium;
     text-align: justify;
 }
@@ -25,4 +29,13 @@
 #formDivider{
     margin-top: 0;
     margin-bottom: 8px;
+}
+
+.btnLong{
+    width: 100%;
+    margin-top: 32px;
+}
+
+.sectionHidden{
+    display: none;
 }

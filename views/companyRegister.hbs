@@ -11,19 +11,19 @@
             <p class="formSubtitle">Perfil del usuario</p>
             <hr id="formDivider" class="contentDivider">
             <label for="txtName" class="col-form-label">Nombre(s)</label>
-            <input id="txtName" type="text" class="form-control" placeholder="Nombre(s)" required>
+            <input id="txtName" type="text" class="form-control" placeholder="Nombre(s)" name="name" required>
             <label for="txtLastName" class="col-form-label">Apellidos</label>
-            <input id="txtLastName" type="text" class="form-control" placeholder="Apellidos" required>
+            <input id="txtLastName" type="text" class="form-control" placeholder="Apellidos" name="lastName" required>
             <label for="txtPhone" class="col-form-label">Teléfono</label>
-            <input id="txtPhone" type="text" class="form-control" placeholder="Número" required>
+            <input id="txtPhone" type="text" class="form-control" placeholder="Número" name="phoneNumber" required>
             <label for="txtPosition" class="col-form-label">Cargo en la empresa</label>
-            <input id="txtPosition" type="text" class="form-control" placeholder="Cargo en la empresa" required>
+            <input id="txtPosition" type="text" class="form-control" placeholder="Cargo en la empresa" name="title" required>
             <p class="formSubtitle">Datos de acceso</p>
             <hr id="formDivider" class="contentDivider">
             <label for="txtMail" class="col-form-label">Correo</label>
-            <input id="txtMail" type="text" class="form-control" placeholder="Correo" required>
+            <input id="txtMail" type="text" class="form-control" placeholder="Correo" name="email" required>
             <label for="txtPassword" class="col-form-label">Contraseña</label>
-            <input id="txtPassword" type="password" class="form-control" placeholder="Contraseña" required>
+            <input id="txtPassword" type="password" class="form-control" placeholder="Contraseña" name="password" required>
             <div class="row">
                 <div class="col-6">
                     <button class="buttonSolidInverted btnLong btn btn-outline-success" type="button" onclick="userSectionCancel()">Cancelar</button>
@@ -38,9 +38,9 @@
             <p class="formSubtitle">Información de Empresa</p>
             <hr id="formDivider" class="contentDivider">
             <label for="txtCompanyName" class="col-form-label">Nombre de la empresa</label>
-            <input id="txtCompanyName" type="text" class="form-control" placeholder="Nombre de la empresa" required>
+            <input id="txtCompanyName" type="text" class="form-control" placeholder="Nombre de la empresa" name="companyName" required>
             <label for="listCompanyBusiness" class="col-form-label">Giro</label>
-            <select id="listCompanyBusiness" class="form-select" required>
+            <select id="listCompanyBusiness" class="form-select" name="companyBusiness" required>
               <option value="">Selecciona...</option>
               <option value="1">Agencia Aduanal</option>
               <option value="2">Agencia de Autos</option>
@@ -97,13 +97,13 @@
               <option value="53">Varios Giros</option>
             </select>
             <label for="txtEmployeeNumber" class="col-form-label">Número de empleados</label>
-            <input id="txtEmployeeNumber" type="text" class="form-control" placeholder="Número de empleados" required>
+            <input id="txtEmployeeNumber" type="text" class="form-control" placeholder="Número de empleados" name="quantityEmployees" required>
             <label for="txtMainActivity" class="col-form-label">Actividad principal</label>
-            <input id="txtMainActivity" type="text" class="form-control" placeholder="Actividad principal" required>
+            <input id="txtMainActivity" type="text" class="form-control" placeholder="Actividad principal" name="mainRole" required>
             <label for="txtWebSite" class="col-form-label">Sitio web</label>
-            <input id="txtWebSite" type="text" class="form-control" placeholder="Sitio web">
+            <input id="txtWebSite" type="text" class="form-control" placeholder="Sitio web" name="webPage">
             <label for="txtDescription" class="col-form-label">Descripción</label>
-            <input id="txtDescription" type="text" class="form-control" placeholder="Descripción" required>
+            <input id="txtDescription" type="text" class="form-control" placeholder="Descripción" name="description" required>
             <div class="row">
                 <div class="col-6">
                     <button class="buttonSolidInverted btnLong btn btn-outline-success" type="button" onclick="infoSectionBack()">Atrás</button>
@@ -118,11 +118,11 @@
             <p class="formSubtitle">Perfil de sucursal</p>
             <hr id="formDivider" class="contentDivider">
             <label for="txtBranchName" class="col-form-label">Nombre de la sucursal</label>
-            <input id="txtBranchName" type="text" class="form-control" placeholder="Nombre de la sucursal" required>
+            <input id="txtBranchName" type="text" class="form-control" placeholder="Nombre de la sucursal" name="branchName" required>
             <p class="formSubtitle">Ubicación de sucursal</p>
             <hr id="formDivider" class="contentDivider">
             <label for="listState" class="col-form-label">Estado</label>
-            <select id="listState" class="form-select" required>
+            <select id="listState" class="form-select" name="state" required>
               <option value="">Seleccionar Estado...</option>
               <option value="1">Aguascalientes</option>
               <option value="2">Baja California</option>
@@ -158,35 +158,35 @@
               <option value="32">Zacatecas</option>
             </select>
             <label for="txtCity" class="col-form-label">Ciudad</label>
-            <input id="txtCity" type="text" class="form-control" placeholder="Ciudad" required>
+            <input id="txtCity" type="text" class="form-control" placeholder="Ciudad" name="city" required>
             <div class="row">
               <div class="col-8">
                 <label for="txtStreet" class="col-form-label">Calle</label>
-                <input id="txtStreet" type="text" class="form-control" placeholder="Calle" required>
+                <input id="txtStreet" type="text" class="form-control" placeholder="Calle" name="street" required>
               </div>
               <div class="col-4">
                 <label for="txtNumber" class="col-form-label">Número</label>
-                <input id="txtNumber" type="text" class="form-control" placeholder="Número" required>
+                <input id="txtNumber" type="text" class="form-control" placeholder="Número" name="streetNumber" required>
               </div>
             </div>
             <div class="row">
               <div class="col-8">
                 <label for="txtSuburb" class="col-form-label">Colonia</label>
-                <input id="txtSuburb" type="text" class="form-control" placeholder="Colonia" required>
+                <input id="txtSuburb" type="text" class="form-control" placeholder="Colonia" name="suburb" required>
               </div>
               <div class="col-4">
                 <label for="txtZip" class="col-form-label">Código postal</label>
-                <input id="txtZip" type="text" class="form-control" placeholder="Código postal" required>
+                <input id="txtZip" type="text" class="form-control" placeholder="Código postal" name="zip" required>
               </div>
             </div>
             <p class="formSubtitle">Contacto de la sucursal</p>
             <hr id="formDivider" class="contentDivider">
             <label for="txtNameContact" class="col-form-label">Nombre completo del contacto</label>
-            <input id="txtNameContact" type="text" class="form-control" placeholder="Nombre completo del contacto" required>
+            <input id="txtNameContact" type="text" class="form-control" placeholder="Nombre completo del contacto" name="contactName" required>
             <label for="txtMailContact" class="col-form-label">Correo electrónico</label>
-            <input id="txtMailContact" type="text" class="form-control" placeholder="Correo electrónico" required>
+            <input id="txtMailContact" type="text" class="form-control" placeholder="Correo electrónico" name="contactMail" required>
             <label for="txtPhoneContact" class="col-form-label">Número de teléfono</label>
-            <input id="txtPhoneContact" type="text" class="form-control" placeholder="Número de teléfono" required>
+            <input id="txtPhoneContact" type="text" class="form-control" placeholder="Número de teléfono" name="contactPhone" required>
             <p class="formSubtitle">Beneficios de la sucursal</p>
             <hr id="formDivider" class="contentDivider">
             <p class="formContent">Marca los beneficios y prestaciones que ofrece su empresa.</p>

@@ -53,21 +53,6 @@ const newUserController = require('../controllers/storeUser');
 const { isBuffer } = require('util');
 router.post('/auth/register', redirectIfAuth, newUserController);
 
-//Pagina Empresas
-router.get('/empresas', (req, res) => {
-    res.render('empresas');
-});
-
-//Pagina Vacantes
-router.get('/vacantes', (req, res) => {
-    res.render('vacants');
-});
-
-//Pagina Aspirantes
-router.get('/aspirantes', (req, res) => {
-    res.render('aspirantes');
-});
-
 //Perfil de Empresa
 router.get('/perfilEmpresa', (req, res) => {
     res.render('companyProfile');
@@ -78,6 +63,11 @@ router.get('/perfilEmpresa', (req, res) => {
 router.get('/company/register', (req, res) => {
     res.render('companyRegister');
 });
+
+//POST REGISTER COMPANY
+const newCompanyController = require('../controllers/storeCompany');
+const { isBuffer } = require('util');
+router.post('/company/register', redirectIfAuth, newCompanyController);
 
 //Página home
 router.use((req,res) =>{

@@ -17,6 +17,7 @@
 
 body{
     font-family: 'Montserrat';
+    color: var(--color-black);
 }
 
 .navbar{
@@ -74,6 +75,10 @@ body{
     background-color: white;
     border-color: var(--color-blue-main);
     color: var(--color-blue-main);
+}
+
+.btn-wide{
+    width: 100%;
 }
 
 #footerContainer{

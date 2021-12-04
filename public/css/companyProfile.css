@@ -83,10 +83,6 @@
     border-radius: 5px;
 }
 
-.vacantElement{
-    
-}
-
 .vacantName{
     color: var(--color-blue-light);
     font-size: larger;

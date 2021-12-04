@@ -14,7 +14,7 @@ const empresasSchema = new Schema({
         required: true
     },
     numero: {
-        type: Int,
+        type: Number,
         required: true
     },
     colonia: {
@@ -22,7 +22,7 @@ const empresasSchema = new Schema({
         required: true
     },
     postal: {
-        type: Int,
+        type: Number,
         required: true
     },
     estado: {

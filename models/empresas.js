@@ -5,34 +5,70 @@ const Schema = mongoose.Schema;
 
 const empresasSchema = new Schema({
 
-    nombre: {
+    companyName: {
         type: String,
         required: true
     },
-    calle: {
+    companyBusiness: {
         type: String,
         required: true
     },
-    numero: {
+    quantityEmployees: {
         type: Number,
         required: true
     },
-    colonia: {
+    mainRole: {
         type: String,
         required: true
     },
-    postal: {
+    webPage: {
+        type: String,
+        required: true
+    },
+    description: {
+        type: String,
+        required: true
+    },
+    branchName: {
+        type: String,
+        required: true
+    },
+    state: {
+        type: String,
+        required: true
+    },
+    city: {
+        type: String,
+        required: true
+    },
+    street: {
+        type: String,
+        required: true
+    },
+    streetNumber: {
         type: Number,
         required: true
     },
-    estado: {
+    suburb: {
         type: String,
         required: true
     },
-    ciudad: {
+    zip: {
+        type: Number,
+        required: true
+    },
+    contactName: {
         type: String,
         required: true
-    }
+    },
+    contactMail: {
+        type: String,
+        required: true
+    },
+    contactPhone: {
+        type: String,
+        required: true
+    },
 });
 
 

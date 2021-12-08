@@ -53,6 +53,11 @@ const newUserController = require('../controllers/storeUser');
 const { isBuffer } = require('util');
 router.post('/users/register', redirectIfAuth, newUserController);
 
+//Perfil de Alumno
+router.get('/perfilAspirante', (req, res) => {
+    res.render('applicantProfile');
+});
+
 //Perfil de Empresa
 router.get('/perfilEmpresa', (req, res) => {
     res.render('companyProfile');

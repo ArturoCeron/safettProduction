@@ -23,7 +23,7 @@ router.use(expressSession({
 
 // Variables Globales
 router.use((req, res, next) =>{
-    res.locals.loggedIn = req.session.userId || null;
+    res.locals.loggedIn = req.session.username || null;
     next();
 });
 

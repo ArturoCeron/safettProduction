@@ -6,9 +6,9 @@
         <p class="formContent">Escribe tu correo electrónico y contraseña para ingresar.</p>
         <form action="/users/login" method="POST">
           <label for="inputPassword" class="col-form-label">Correo</label>
-          <input id="txtMail" type="text" class="form-control" placeholder="Correo">
+          <input id="txtMail" type="text" class="form-control" placeholder="Correo" name="username">
           <label for="inputPassword" class="col-form-label">Contraseña</label>
-          <input id="txtPassword" type="password" class="form-control" placeholder="Contraseña">
+          <input id="txtPassword" type="password" class="form-control" placeholder="Contraseña" name="password">
           <button id="btnLogInMail" class="buttonSolid btn btn-outline-success" type="submit">Ingresar con correo electrónico</button>
         </form>
       </div>

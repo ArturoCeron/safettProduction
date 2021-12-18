@@ -3,7 +3,7 @@
 const User = require("../models/user");
 
 module.exports = (req, res, next) =>{
-    User.findById(req.session.userId, (error, user) =>{
+    User.findById(req.session.username, (error, user) =>{
         if(error || !user){
             return res.redirect('/');
         }

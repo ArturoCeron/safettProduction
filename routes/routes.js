@@ -63,6 +63,16 @@ router.get('/perfilEmpresa', (req, res) => {
     res.render('companyProfile');
 });
 
+//Vacantes
+router.get('/empleos', (req, res) => {
+    res.render('vacants');
+});
+
+//Vacante Especifica
+router.get('/vacante', (req, res) => {
+    res.render('job');
+});
+
 //RENDER TEMPORAL
 //REGISTER COMPANY
 router.get('/company/register', (req, res) => {

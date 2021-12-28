@@ -15,8 +15,7 @@
     text-align: justify;
 }
 
-#btnLogInMail{
-    width: 100%;
+.btnMargin{
     margin-top: 32px;
 }
 

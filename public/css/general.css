@@ -30,6 +30,11 @@ body{
     padding-right: 30px;
 }
 
+.buttonSmall{
+    font-weight: 500;
+    font-size: small;
+}
+
 .buttonSolid {
     background-color: var(--color-blue-main)!important;;
     color: white;
@@ -45,6 +50,20 @@ body{
     border-color: var(--color-blue-dark);
     color: white;
 }
+
+.buttonWarning{
+    background-color: #c51937!important;
+    border-color: #c51937;
+}
+
+.buttonWarning:hover,
+.buttonWarning:active,
+.buttonWarning:visited,
+.buttonWarning:focus {
+    background-color: #9e142c!important;
+    border-color: #9e142c;
+}
+
 
 .buttonSolidInverted {
     background-color: white;

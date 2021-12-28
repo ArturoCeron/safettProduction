@@ -29,18 +29,27 @@
     background-color: var(--color-blue-main);
     border-radius: 10px;
     padding: 0px;
-    height: 1000px;
+    min-height: 950px;
     transform: translate(0, -232px);
 }
 
-#companyLogo{
+.logo{
     background-color: white;
     object-fit: contain;
     aspect-ratio: 1;
+    border-radius: 10px;
+}
+
+#companyLogo{
     width: calc(100% - 48px);
     height: auto;
-    border-radius: 10px;
     margin: 24px;
+}
+
+#myCompanyLogo{
+    width: 180px;
+    height: auto;
+    padding: 8px;
 }
 
 .infoSectionDivider{

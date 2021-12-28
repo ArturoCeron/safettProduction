@@ -16,7 +16,7 @@
 <div class="container">
     <div class="row">
         <div id="companyInformationSection" class="col-3">
-            <img id="companyLogo" src="../img/logoMedtronic.png">
+            <img class="logo" id="companyLogo" src="../img/logoMedtronic.png">
             <hr class="infoSectionDivider">
             <div class="infoSection">
                 <p class="infoTitle">Número de vacantes:</p>
@@ -59,7 +59,9 @@
             </div>
             <div class="col-12 d-flex justify-content-end">
                 <div class="col-3">
+                    {{#unless companyLogged}}
                     <button class="buttonSolid btn btn-outline-success btn-wide" type="button" onclick="">Solicitar puesto</button>
+                    {{/unless}}
                 </div>
             </div>
         </div>

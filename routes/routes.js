@@ -68,9 +68,19 @@ router.get('/empleos', (req, res) => {
     res.render('vacants');
 });
 
+//Vacantes de la compañia
+router.get('/misVacantes', (req, res) => {
+    res.render('myVacants');
+});
+
 //Vacante Especifica
 router.get('/vacante', (req, res) => {
     res.render('job');
+});
+
+//Nueva Vacante
+router.get('/nuevaVacante', (req, res) => {
+    res.render('newVacant');
 });
 
 //RENDER TEMPORAL

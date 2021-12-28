@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-6">
+
+      <div id="companyRegistrationForm">
+        <p id="formTitle">Registro de nueva vacante</p>
+
+        <form action="/vacants/register" method="POST">
+          <div id="companyUserSection">
+            <p class="formSubtitle">Datos de la vacante</p>
+            <hr id="formDivider" class="contentDivider">
+            <label for="txtName" class="col-form-label">Nombre de la vacante</label>
+            <input id="txtName" type="text" class="form-control" placeholder="Nombre" name="name" required>
+            <label for="txtDesc" class="col-form-label">Descripción y detalles de las actividades</label>
+            <textarea id="txtDesc" class="form-control" rows="3" placeholder="Descripción" name="description" required></textarea>
+            <label for="txtReq" class="col-form-label">Requisitos</label>
+            <textarea id="txtReq" class="form-control" rows="3" placeholder="Requisitos" name="requirements" required></textarea>
+            <label for="txtNumV" class="col-form-label">Número de vacantes</label>
+            <input id="txtNumV" type="number" class="form-control" placeholder="Número de vacantes" name="numberVacants" required>
+            <label for="txtArea" class="col-form-label">Área</label>
+            <input id="txtArea" type="text" class="form-control" placeholder="Área" name="area" required>
+            <label for="txtSalary" class="col-form-label">Salario</label>
+            <input id="txtSalary" type="number" min="1" step="any" class="form-control" placeholder="$0.00" name="salary" required>
+            <label for="txtContract" class="col-form-label">Tipo de contrato</label>
+            <select id="txtContract" class="form-select" name="contract" required>
+              <option value="">Selecciona...</option>
+              <option value="1">Contrato por Obra</option>
+              <option value="2">Contrato por Tiempo Indeterminado</option>
+              <option value="3">Contrato Periodo de Prueba</option>
+              <option value="4">Contrato por Relación de Trabajo por Temporada</option>
+            </select>
+            <label for="txtSchedule" class="col-form-label">Horario</label>
+            <input id="txtSchedule" type="text" class="form-control" placeholder="Horario" name="schedule" required>
+             <button class="buttonSolid btn btn-outline-success btn-wide btnMargin">Registrar vacante</button>
+          </div> 
+        </form>     
+      </div>
+    </div>
+  </div>
+</div>

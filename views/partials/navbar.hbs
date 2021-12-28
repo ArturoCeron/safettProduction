@@ -1,22 +1,49 @@
 <!-- Navbar -->
-<header>            
-    <nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="/"> LOGO </a></li>
-                <li class="nav-item"><a class="nav-link" href="/empleos"> Empleos </a></li>
-                <li class="nav-item"><a class="nav-link" href="/empresas"> Empresas </a></li>
-            <li class="nav-item"><a class="nav-link" href="#"> Contacto </a></li>
-            </ul>
-    
-            <div class="collapse navbar-collapse" id="main_nav">
+<header>
+    <!--
+    #if companyLogged
+    -->
+    {{#if true}}
+        <nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
                 <ul class="navbar-nav ms-auto">
-                    {{#unless loggedIn}}<li class="nav-item"><a class="nav-link" href="/auth/login"> Ingresa </a></li>
-                    <a href="/users/register"><button class="buttonBorder btn btn-outline-success" type="submit">Crea una cuenta</button></a>{{/unless}}                    
-                    {{#if loggedIn}}<li class="nav-item"><a class="nav-link" href="/auth/logout"> Cerrar sesión </a></li>{{/if}}
+                    <li class="nav-item"><a class="nav-link" href="/"> LOGO </a></li>
+                    <li class="nav-item"><a class="nav-link" href="/misVacantes"> Mis vacantes </a></li>
+                    <li class="nav-item"><a class="nav-link" href="/aplicantes"> Aplicantes </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"> Contacto </a></li>
                 </ul>
+        
+                <div class="collapse navbar-collapse" id="main_nav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="/perfilEmpresa"> Perfil </a></li>       
+                        <li class="nav-item"><a class="nav-link" href="/auth/logout"> Cerrar sesión </a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    {{else if adminLogged}}
+
+    {{else}}
+        <nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/"> LOGO </a></li>
+                    <li class="nav-item"><a class="nav-link" href="/empleos"> Empleos </a></li>
+                    <li class="nav-item"><a class="nav-link" href="/empresas"> Empresas </a></li>
+                <li class="nav-item"><a class="nav-link" href="#"> Contacto </a></li>
+                </ul>
+                <div class="collapse navbar-collapse" id="main_nav">
+                    <ul class="navbar-nav ms-auto">
+                        {{#unless loggedIn}}<li class="nav-item"><a class="nav-link" href="/auth/login"> Ingresa </a></li>
+                        <a href="/users/register"><button class="buttonBorder btn btn-outline-success" type="submit">Crea una cuenta</button></a>{{/unless}}                    
+                        {{#if loggedIn}}
+                        <li class="nav-item"><a class="nav-link" href="/auth/logout"> Perfil </a></li>
+                        <li class="nav-item"><a class="nav-link" href="/auth/logout"> Cerrar sesión </a></li>
+                        {{/if}}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    {{/if}}
 </header>
 <!-- Navbar -->

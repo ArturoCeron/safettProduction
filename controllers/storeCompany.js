@@ -6,6 +6,7 @@ const path = require('path');
 
 module.exports = (req, res)=>{
     let user = new User();
+    user.companyName = req.body.companyName;
     user.username = req.body.email;
     user.password = req.body.password;
     user.name = req.body.name;

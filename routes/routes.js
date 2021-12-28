@@ -83,6 +83,12 @@ router.get('/nuevaVacante', (req, res) => {
     res.render('newVacant');
 });
 
+//Registrar Vacante
+const companyUser = require("../models/companyUser");
+const storeVacantController = require('../controllers/storeVacant');
+router.post('/vacants/register', storeVacantController);
+
+
 //RENDER TEMPORAL
 //REGISTER COMPANY
 router.get('/company/register', (req, res) => {

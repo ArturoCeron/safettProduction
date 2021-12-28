@@ -5,33 +5,39 @@ const Schema = mongoose.Schema;
 
 const vacantes = new Schema({
 
-    fecha: {
-        type: Date
-    },
-    nombre: {
+    companyName: {
         type: String,
         required: true
     },
-    carrerasRelacionadas: {
+    name: {
         type: String,
         required: true
     },
-    empresa: {
+    details: {
         type: String,
         required: true
     },
-    cantidad: {
-        type: Int
+    requirements: {
+        type: String,
+        required: true
     },
-    salario: {
+    quantityVacants: {
+        type: Number,
+        default: 1
+    },
+    area:{
+        type: String,
+        required: true
+    },
+    salary: {
         type: Number, 
         default: 0
     },
-    desc_det: {
+    typeContract: {
         type: String,
         required: true
     },
-    exp_req: {
+    schedule: {
         type: String,
         required: true
     }

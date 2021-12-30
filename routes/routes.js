@@ -59,8 +59,28 @@ router.get('/perfilAspirante', (req, res) => {
 });
 
 //Perfil de Empresa
+const companyUser = require("../models/companyUser");
+const companyVacant = require('../models/vacants');
 router.get('/perfilEmpresa', (req, res) => {
-    res.render('companyProfile');
+    let idUser = req.session;
+    companyUser.find(idUser, (err, userData)=>{
+        if (err) return res.status(500).send({
+            message: `Error al realizar la petición ${err}`
+        });
+        if (!userData) return res.status(404).send({
+            message: 'El usuario no existe'
+        });
+        companyVacant.find({"companyName": userData[0].companyName}, (err, vacantData)=>{
+            if (err) return res.status(500).send({
+                message: `Error al realizar la petición ${err}`
+            });
+            if (!vacantData) return res.status(404).send({
+                message: 'El usuario no existe'
+            });
+            console.log(vacantData[0]);
+            res.render('companyProfile', {datos: vacantData});
+        }).lean();
+    }).lean();
 });
 
 //Vacantes
@@ -69,8 +89,8 @@ router.get('/empleos', (req, res) => {
 });
 
 //Vacantes de la compañia
-const companyUser = require("../models/companyUser");
-const companyVacant = require('../models/vacants');
+//const companyUser = require("../models/companyUser");
+//const companyVacant = require('../models/vacants');
 router.get('/misVacantes', (req, res) => {
     let idUser = req.session;
     companyUser.find(idUser, (err, userData)=>{

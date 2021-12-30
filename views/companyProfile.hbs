@@ -53,13 +53,14 @@
                     
                 <p class="contentTitle">Vacantes</p>
                 <hr class="contentDivider">
-                <div class="vacantElement flex">
-                    <p class="vacantName">Supervisor Sr de Aseguramiento de Calidad</p>
-                    <p class="vacantSalary">$15,000 mensual</p>
-                    <p class="vacantDescription">Carrera Profesional concluida (Ing en electronica, mecatronica, sistemas, etc)
-                        5 Años de experiencia en la industria medica y en area de calidad, Conocimiento avanzado en Microsoft,(Macros)</p>
+                {{#datos}}    
+                 <div class="vacantElement flex">
+                    <p class="vacantName">{{name}}</p>
+                    <p class="vacantSalary">${{salary}}</p>
+                    <p class="vacantDescription">{{details}}</p>
                     <p class="vacantDate">05 Nov Tijuana</p>
                 </div>
+                {{/datos}}
             </div>
         </div>
     </div>

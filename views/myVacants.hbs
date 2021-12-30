@@ -28,26 +28,26 @@
             <div class="contentSection">   
                 <p class="contentTitle">Mis vacantes</p>
                 <hr class="contentDivider">
-                <div class="row">
-                    <div class="col-11">
-                        <div class="vacantElement flex">
-                            <p class="vacantName">Supervisor Sr de Aseguramiento de Calidad</p>
-                            <p class="vacantSalary">$15,000 mensual</p>
-                            <p class="vacantDescription">Carrera Profesional concluida (Ing en electronica, mecatronica, sistemas, etc)
-                                5 Años de experiencia en la industria medica y en area de calidad, Conocimiento avanzado en Microsoft,(Macros)</p>
-                            <p class="vacantDate">05 Nov Tijuana</p>
+                {{#datos}}    
+                    <div class="row">
+                        <div class="col-11">
+                            <div class="vacantElement flex">
+                                <p class="vacantName">{{name}}</p>
+                                <p class="vacantSalary">${{salary}}</p>
+                                <p class="vacantDescription">{{details}}</p>
+                                <p class="vacantDate">05 Nov Tijuana</p>
+                            </div>
+                        </div>
+                        <div class="col-1 d-flex">
+                            <div class="my-auto mx-auto">
+                                <form action="vacante" method="get">
+                                    <button class="buttonSolid btn btn-outline-success btn-wide buttonSmall">Ver más</button>
+                                </form>
+                                <button class="buttonSolid buttonWarning btn btn-outline-success btn-wide buttonSmall" type="button" onclick="" style="margin-top: 16px;">Eliminar</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-1 d-flex">
-                        <div class="my-auto mx-auto">
-                            <form action="vacante" method="get">
-                                <button class="buttonSolid btn btn-outline-success btn-wide buttonSmall">Ver más</button>
-                            </form>
-                            <button class="buttonSolid buttonWarning btn btn-outline-success btn-wide buttonSmall" type="button" onclick="" style="margin-top: 16px;">Eliminar</button>
-                        </div>
-                    </div>
-                </div>
-                
+                {{/datos}}
             </div>
         </div>
     </div>

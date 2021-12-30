@@ -69,8 +69,28 @@ router.get('/empleos', (req, res) => {
 });
 
 //Vacantes de la compañia
+const companyUser = require("../models/companyUser");
+const companyVacant = require('../models/vacants');
 router.get('/misVacantes', (req, res) => {
-    res.render('myVacants');
+    let idUser = req.session;
+    companyUser.find(idUser, (err, userData)=>{
+        if (err) return res.status(500).send({
+            message: `Error al realizar la petición ${err}`
+        });
+        if (!userData) return res.status(404).send({
+            message: 'El usuario no existe'
+        });
+        companyVacant.find({"companyName": userData[0].companyName}, (err, vacantData)=>{
+            if (err) return res.status(500).send({
+                message: `Error al realizar la petición ${err}`
+            });
+            if (!vacantData) return res.status(404).send({
+                message: 'El usuario no existe'
+            });
+            console.log(vacantData[0]);
+            res.render('myVacants', {datos: vacantData});
+        }).lean();
+    }).lean();
 });
 
 //Vacante Especifica
@@ -84,7 +104,6 @@ router.get('/nuevaVacante', (req, res) => {
 });
 
 //Registrar Vacante
-const companyUser = require("../models/companyUser");
 const storeVacantController = require('../controllers/storeVacant');
 router.post('/vacants/register', storeVacantController);
 

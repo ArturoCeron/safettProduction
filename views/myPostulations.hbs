@@ -1,51 +1,26 @@
-<div id="companyIdentityBanner" class="container-fluid d-flex">
-    <div class="container">
-        <div class="row">
-            <div class="col-2">
-                <img class="logo" id="myCompanyLogo" src="../img/logoMedtronic.png">
-            </div>
-            <div class="col-10" style="padding: 30px 0px 0px 22px;">
-                <div id="companyIdentity">
-                    <p id="companyName">Medtronic México, S. de R.L. de C.V. (El Lago)</p>
-                    <p id="companyDescription">Manufactura de productos médicos.</p>
-                    <hr class="companySectionDivider">
-                    <div class="row d-flex">
-                        <div class="col-xxl-2 col-3 ms-auto">
-                            <form action="/nuevaVacante">
-                                <button class="buttonSolid btn btn-outline-success btn-wide">Nueva vacante</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-10" style="padding: 0;">
             <div class="contentSection">   
-                <p class="contentTitle">Mis vacantes</p>
+                <p class="contentTitle">Mis aplicaciones</p>
                 <hr class="contentDivider">
                 {{#datos}}    
                     <div class="row">
                         <div class="col-11">
                             <div class="flex">
-                                <p class="vacantName">{{name}}</p>
-                                <p class="vacantSalary">${{salary}}</p>
-                                <p class="vacantDescription">{{details}}</p>
-                                <p class="vacantDate">{{schedule}}</p>
+                                <p class="vacantName">{{vacantName}}</p>
+                                <p class="vacantSalary">{{companyName}}</p>
                             </div>
                         </div>
                         <div class="col-1 d-flex">
                             <div class="my-auto mx-auto">
-                                <form action="vacante/{{_id}}" method="get">
+                                <form action="vacante/{{idVacant}}" method="get">
                                     <button class="buttonSolid btn btn-outline-success btn-wide buttonSmall">Ver más</button>
                                 </form>
+                                <!-- 
                                 <form action="vacants/delete/{{_id}}?_method=delete" method="POST">
                                     <button class="buttonSolid buttonWarning btn btn-outline-success btn-wide buttonSmall" style="margin-top: 16px;">Eliminar</button>
-                                </form>
+                                </form> -->
                             </div>
                         </div>
                     </div>

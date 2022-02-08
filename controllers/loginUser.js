@@ -12,11 +12,12 @@ module.exports = (req, res)=>{
             bcrypt.compare(password,user.password, (error, same) =>{
                 if (same){
                     req.session.username = user.username;
+                    req.session.userId = user._id;
+                    req.session.logged = user.role;
                     res.redirect('/');
                 }
                 else{
                     res.redirect('/auth/login');
-                    console.log("Salida 1");
                 }
             });
         }
@@ -26,17 +27,17 @@ module.exports = (req, res)=>{
                     bcrypt.compare(password,companyUser.password, (error, same) =>{
                         if (same){
                             req.session.username = companyUser.username;
+                            req.session.userId = companyUser._id;
+                            req.session.role = companyUser.role;
                             res.redirect('/');
                         }
                         else{
                             res.redirect('/auth/login');
-                            console.log("Salida 2");
                         }
                     });
                 }
                 else{
                     res.redirect('/auth/login');
-                    console.log("Salida 3");
                 }
             });
         }

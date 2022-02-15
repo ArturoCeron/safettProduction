@@ -13,7 +13,7 @@ const redirectIfAuth = require('../middleware/redirectIfAuth');
 //MODELS
 const companyUser = require("../models/companyUser");
 const companyVacant = require('../models/vacants');
-const Company = require('../models/empresas');
+const Company = require('../models/companies');
 const postulations = require('../models/postulations');
 const usersInfo = require('../models/user');
 
@@ -90,6 +90,20 @@ router.get('/perfilAspirante', authAccount, (req, res) => {
     }).lean();
 });
 
+//Prefil de Empresa visto desde alumno
+router.get('/empresa/:companyId', authAccount, (req, res) => {
+    let companyId = req.params.companyId;
+    Company.find({"_id": companyId}, (err, datosPerfil)=>{
+        if (err) return res.status(500).send({
+            message: `Error al realizar la petición ${err}`
+        });
+        if (!datosPerfil) return res.status(404).send({
+            message: `El la empresa ${companyId} no existe`
+        });
+        res.render('companyProfile', {datosPerfil});
+    }).lean();
+});
+
 //Perfil de Empresa
 
 router.get('/perfilEmpresa', authAccount, (req, res) => {
@@ -132,6 +146,19 @@ router.get('/empleos', (req, res) => {
             message: `La vacante no existe`
         });
         res.render('vacants', {vacantsData: vacantsData});
+    }).lean();
+});
+
+//Empresas
+router.get('/empresas', (req, res) => {
+    Company.find({}, (err, companiesData)=>{
+        if (err) return res.status(500).send({
+            message: `Error al realizar la petición ${err}`
+        });
+        if (!companiesData) return res.status(404).send({
+            message: `La vacante no existe`
+        });
+        res.render('companies', {companiesData});
     }).lean();
 });
 
@@ -224,6 +251,11 @@ router.get('/company/register', (req, res) => {
 router.post('/company/register', redirectIfAuth, newCompanyController);
 
 router.get('/myPosts', authUser, userPostulations);
+
+//Contacto
+router.get('/contacto',(req, res) => {
+    res.render('contact');
+});
 
 //Página home
 router.use((req,res) =>{
